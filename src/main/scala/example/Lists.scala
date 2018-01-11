@@ -3,6 +3,13 @@ package example
 
 object Lists {
 
+  def recursiveSum(args: Int*):Int={
+    if (args.length == 0) 0
+    else
+      args.head + recursiveSum(args.tail : _*)
+
+  }
+
   /**
     * This method computes the sum of all elements in the list xs. There are
     * multiple techniques that can be used for implementing this method, and
